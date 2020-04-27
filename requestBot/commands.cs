@@ -13,6 +13,7 @@ using TMDbLib.Objects.Search;
 using TMDbLib.Objects.General;
 using System.IO;
 using Newtonsoft.Json;
+using System.Linq;
 
 namespace requestBot
 {
@@ -96,7 +97,7 @@ namespace requestBot
                                 await ctx.RespondAsync("Okay, give me a second.");
                                 await ctx.TriggerTypingAsync();
 
-                                String requestResult = sendRequest.requestMovie(result.Id, cfgjson.ombiApiKey);
+                                String requestResult = sendRequest.requestMovie(result.Id, cfgjson.ombiApiKey, cfgjson.ombiUrl);
                                 responseHeaders responseHeaders = JsonConvert.DeserializeObject<responseHeaders>(requestResult); //deserializes the json response header (requestResult), passes it to the responseHeader object.
                                 if (responseHeaders.isError == true)
                                 {
