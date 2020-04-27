@@ -187,5 +187,7 @@ namespace requestBot
         public string tmdbApiKey { get; private set; }
         [JsonProperty("ombiApiKey")]
         public string ombiApiKey { get; private set; }
+        [JsonProperty("ombiUrl")]
+        public string ombiUrl { get; private set; }
     }
 }
