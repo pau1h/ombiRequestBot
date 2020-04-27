@@ -15,9 +15,9 @@ namespace requestBot
     }
     class sendRequest
     {
-        public static String requestMovie(int ID, String API) //api for ombi, returns the http result as a string
+        public static String requestMovie(int ID, String API, String url) //api for ombi, returns the http result as a string
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://192.168.1.219:5000/api/v1/Request/movie");
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(url + "/api/v1/Request/movie");
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
             httpWebRequest.Headers.Add("ApiKey: " + API);
