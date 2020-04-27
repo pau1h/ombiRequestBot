@@ -2,7 +2,6 @@
 using System.Net.Http;
 using System.Linq;
 using System.Threading.Tasks;
-using RestSharp;
 using System.Text;
 using Newtonsoft.Json.Linq;
 using TMDbLib.Objects.Movies;
