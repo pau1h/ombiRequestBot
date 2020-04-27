@@ -9,7 +9,6 @@ using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
 using Newtonsoft.Json;
 using System.Collections.Generic;
-using TMDbLib.Client;
 using DSharpPlus.Interactivity;
 
 namespace requestBot
@@ -182,5 +181,10 @@ namespace requestBot
 
         [JsonProperty("prefix")]
         public string CommandPrefix { get; private set; }
+
+        [JsonProperty("tmdbApiKey")]
+        public string tmdbApiKey { get; private set; }
+        [JsonProperty("ombiApiKey")]
+        public string ombiApiKey { get; private set; }
     }
 }
