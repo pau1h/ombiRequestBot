@@ -8,7 +8,6 @@ using TMDbLib.Objects.Movies;
 using TMDbLib.Objects.Search;
 using TMDbLib.Objects.General;
 using TMDbLib.Client;
-//api key b3e5109461a747f4a71d48f3c299b38c
 
 namespace requestBot
 {
