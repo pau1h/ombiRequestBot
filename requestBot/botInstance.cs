@@ -21,6 +21,7 @@ namespace requestBot
         static void Main(string[] args)
         {
             var prog = new botInstance();
+            prog.RunBotAsync().GetAwaiter().GetResult();
             
         }
         public async Task RunBotAsync()
