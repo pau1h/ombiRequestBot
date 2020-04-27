@@ -171,6 +171,7 @@ namespace requestBot
                     // as static members of the DiscordColor struct
                 };
                 await e.Context.RespondAsync("", embed: embed);
+                
             }
         }
     }
