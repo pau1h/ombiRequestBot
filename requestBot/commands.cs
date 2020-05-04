@@ -71,7 +71,12 @@ namespace requestBot
                     TMDbClient client = new TMDbClient(cfgjson.tmdbApiKey);
 
                     SearchContainer<SearchMovie> results = searchMovie.getResultsAsync(request, client).Result; //gets movie results bases on query 
-                                                                                                                //cycles through three movie results, asking the user each time if it's the correct result.
+                    if(results.TotalResults == 0)
+                    {
+                        await ctx.TriggerTypingAsync();
+                        await ctx.RespondAsync("No movies found, please check your spelling and try again.");
+                    }
+                    //cycles through three movie results, asking the user each time if it's the correct result.
                     foreach (SearchMovie result in results.Results.Take(maxCycles))
                     {
                         // Print out each hit                         
