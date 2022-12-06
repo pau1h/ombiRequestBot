@@ -1,4 +1,6 @@
 # ombiRequestBot
+This project is now depreciated. Please use more up-to-date alternatives like Overseer.
+
 A Discord request bot for Ombi. Uses the DSharpPlus API for the bot. As of right now, only works for movies.
 
 Add config.json to the debug directory with this information: 
